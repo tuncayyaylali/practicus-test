@@ -6,7 +6,7 @@ on:
 
 env:
   # Update with your Practicus AI URL
-  PRT_URL: https://practicus.my-company.com
+  PRT_URL: https://dev.practicus.io
   PRT_TOKEN: ${{ secrets.PRT_TOKEN }}
 
 jobs:

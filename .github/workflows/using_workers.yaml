@@ -1,0 +1,22 @@
+name: Using Practicus AI Workers
+
+# This action will run each time code is pushed to the repository
+on:
+  - push
+
+env:
+  # Update with your Practicus AI URL
+  PRT_URL: https://practicus.my-company.com
+  PRT_TOKEN: ${{ secrets.PRT_TOKEN }}
+
+jobs:
+  Explore-PracticusAI-Actions:
+    runs-on: practicus-25.5.0
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Perform some task on a Practicus AI Worker
+        run: python cicd/start_worker.py
+
+      - name: View Practicus AI CLI help
+        run: prtcli --help
